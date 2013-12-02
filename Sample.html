@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backbone-Bootstrap Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="content">
+
+</div>
+
+<!-- vendor JS -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/vendors/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/vendors/underscore.js" ></script>
+<script type="text/javascript" src="js/vendors/backbone.js" ></script>
+<script type="text/javascript" src="js/vendors/backbone.marionette.js" ></script>
+
+<!-- App Js -->
+<script type="text/javascript" src="js/hz.utils.js" ></script>
+<script type="text/javascript" src="js/hz.marionette.js" ></script>
+<script type="text/javascript" src="js/app.js" ></script>
+<script type="text/javascript" src="js/app.grid.js" ></script>
+
+<!-- templates -->
+<script id="template_landing_page" type="text/template">
+    <div>
+        <h1>Welcome to my backbone/marionette demo</h1>
+        <h2>Please select from one of the demos below</h2>
+        <ul data-id="demo_list">
+            <li>
+                <a href="#grid"> Grid Demo </a>
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script id="template_grid" type="text/template">
+    <div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th><a href="javascript:void(0)" data-property="Id">#</a></th>
+                    <th><a href="javascript:void(0)" data-property="FirstName">First Name</a></th>
+                    <th><a href="javascript:void(0)" data-property="LastName">Last Name</a></th>
+                    <th><a href="javascript:void(0)" data-property="Email">Email</a></th>
+                </tr>
+            </thead>
+            <tbody  data-id="items" class="table-striped"> </tbody>
+            <tfoot>
+                <tr>
+                    <td>#</td>
+                    <td><input type="text" data-id="txtFirstName" placeholder="First Name" /></td>
+                    <td> <input type="text" data-id="txtLastName" placeholder="Last Name" /></td>
+                    <td>
+                        <input type="text" data-id="txtEmail" placeholder="you@domain.com" />
+                        <a class="btn btn-sm btn-default" data-id="btnAdd"> <i class="glyphicon glyphicon-plus-sign"></i> </a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</script>
+
+<script id="template_grid_row" type="text/template">
+    <td><%= Id %></td>
+    <td><%= FirstName %></td>
+    <td><%= LastName %></td>
+    <td><%= Email %></td>
+</script>
+
+</body>
+</html>
